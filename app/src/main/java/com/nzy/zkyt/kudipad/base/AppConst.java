@@ -5,7 +5,7 @@ import android.os.Environment;
 /**
  * 作者：宁震宇on 2017/11/1.
  * 邮箱：348723352@qq.com
- * 本类作用：全局常量
+ * 本类作用：全局常量    sssss
  */
 
 public class AppConst {
