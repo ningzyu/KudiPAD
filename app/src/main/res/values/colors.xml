@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004da0</color>
+    <color name="colorPrimaryDark">#029eda</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#f8f8f8</color>
+    <color name="onIteem">#d7d7d7</color>
+    <color name="linecolor">#e4e4e4</color>
+    <color name="txtcolor">#1d1d1d</color>
+    <color name="ettxtcolor">#028abf</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#1497db</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+</resources>
