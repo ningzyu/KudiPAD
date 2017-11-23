@@ -10,10 +10,10 @@ import android.os.Environment;
 
 public class AppConst {
     public static final String TAG = "CSDN_LQR";
-    public static final class User {
-        public static final String ID = "id";
-        public static final String PHONE = "phone";
-        public static final String TOKEN = "token";
+    public static final class Settings {
+        public static final String SHOP_ID = "shopid";
+        public static final String IP = "ip";
+        public static final String PORT = "port";
     }
     public static final String SD_Directory= Environment.getExternalStorageDirectory().getPath();
     public static final String KUDI_PATH=SD_Directory+"/kudipets";

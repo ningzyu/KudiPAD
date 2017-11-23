@@ -37,11 +37,11 @@ public class MainPresenter extends BasePresenter<MainView> {
     private BaseRecyclerAdapter<Item> adapter;
     private List<Item> mData = new ArrayList<>();
     private IGoodsManager goodManager;
+
     public MainPresenter(BaseActivity context) {
         super(context);
     }
 
-    @Override
     public void LoadMessage() {
         loadData();
         setAdapter();
@@ -57,21 +57,21 @@ public class MainPresenter extends BasePresenter<MainView> {
                 }
             };
             adapter.setOnItemClickListener((parent, view, position) -> {
-                switch (position){
+                switch (position) {
                     case 0:
                         //导入数据
-                        File file=new File(AppConst.GOODS_PATH);
+                        File file = new File(AppConst.GOODS_PATH);
                         if (file.exists()) {
                             List<GoodItem> goodItemList = ExcelUtil.getInstance().getGoods(file);
-                            Log.i("1117",goodItemList.size()+"条数据");
+                            Log.i("1117", goodItemList.size() + "条数据");
                             //删除并添加
 //                            goodManager.delete();
                             LouSQLite.deleteFrom(TABLE_USER);//删除
 //                            long i=goodManager.addAllUser(goodItemList);
                             LouSQLite.insert(TABLE_USER, goodItemList);
-                            LouSQLite.query(TABLE_USER , "", null);
+                            LouSQLite.query(TABLE_USER, "", null);
 //                            Log.i("1117","添加结果-----"+goodManager.queryGoodsUsers().size());
-                            Log.i("1117","添加结果-----"+LouSQLite.query(TABLE_USER , "", null).size());
+                            Log.i("1117", "添加结果-----" + LouSQLite.query(TABLE_USER, "", null).size());
 //                            if (i==0) {
 //                                UIUtils.showToast("导入成功！");
 //                            } else {
@@ -145,11 +145,15 @@ public class MainPresenter extends BasePresenter<MainView> {
         public Item(String name, int img) {
             this.name = name;
             this.img = img;
+
         }
     }
-    public void toBack(){
-        long exitTime = 0;
-        if((System.currentTimeMillis()-exitTime) > 2000){
+
+    long exitTime = 0;
+
+    public void toBack() {
+        Log.i("eeeeeeee", exitTime + "");
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
             UIUtils.showToast("再按一次退出程序");
             exitTime = System.currentTimeMillis();
         } else {

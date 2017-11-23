@@ -12,7 +12,6 @@ public abstract class BasePresenter<V> {
     public BasePresenter(BaseActivity context) {
         mContext = context;
     }
-    public abstract void LoadMessage();
     protected Reference<V> mViewRef;
 
     public void attachView(V view) {

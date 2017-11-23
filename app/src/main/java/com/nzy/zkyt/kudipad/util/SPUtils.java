@@ -12,7 +12,7 @@ import java.util.Map;
  */
 
 public class SPUtils {
-    private static final String SP_NAME = "nzy";//这个就是一个名字，随便起
+    private static final String SP_NAME = "kudi";//这个就是一个名字，随便起
     private static SPUtils mSpUtils;//
     private Context context;
     private SharedPreferences sp;

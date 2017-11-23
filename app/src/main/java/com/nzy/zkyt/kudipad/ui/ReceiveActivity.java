@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.nzy.zkyt.kudipad.R;
+import com.nzy.zkyt.kudipad.data.Para;
 import com.nzy.zkyt.kudipad.ui.base.BaseActivity;
 import com.nzy.zkyt.kudipad.ui.presenter.ReceivePresenter;
 import com.nzy.zkyt.kudipad.ui.view.ReceiveView;
@@ -28,14 +29,16 @@ public class ReceiveActivity  extends BaseActivity<ReceiveView,ReceivePresenter>
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.iv_scan:
-                //开启扫码
+                //TODO 开启扫码，关闭软键盘，
                 break;
             case R.id.btn_receive1:
-                //
+                mPresenter.Request(Para.BILL_RECEIPT);
                 break;
             case R.id.btn_receive2:
+                mPresenter.Request(Para.BILL_RATION_I);
                 break;
             case R.id.btn_receive3:
+                mPresenter.Request(Para.BILL_TRANSFER_I);
                 break;
             default:
                 break;
@@ -55,11 +58,6 @@ public class ReceiveActivity  extends BaseActivity<ReceiveView,ReceivePresenter>
     @Override
     protected String getBarTitle() {
         return "收货";
-    }
-
-    @Override
-    public void initData() {
-        mPresenter.LoadMessage();
     }
 
     @Override

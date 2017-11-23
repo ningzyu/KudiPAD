@@ -69,8 +69,7 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
      */
     private void setupAppBarAndToolbar() {
         //初始化设置 Toolbar
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
 //        Window window = getWindow();
 //        //隐藏状态栏
 //        //定义全屏参数
@@ -79,7 +78,14 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
 //        window.setFlags(flag, flag);
         //沉浸式状态栏
         StatusBarUtil.setColor(this, UIUtils.getColor(R.color.colorPrimaryDark), 10);
+        if (getBarTitle()==null||getBarTitle().equals("")){
+            toolbar.setVisibility(View.GONE);
+        }else {
+            toolbar.setVisibility(View.VISIBLE);
+        }
         barTitle.setText(getBarTitle());
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
@@ -108,7 +114,7 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
 
     protected abstract String getBarTitle();
 
-    public abstract void initData();
+    public  void initData(){};
 
     public void initListener() {
     }

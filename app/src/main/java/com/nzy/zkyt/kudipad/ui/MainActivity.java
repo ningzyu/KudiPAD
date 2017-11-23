@@ -52,32 +52,6 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter> implement
         }
         return super.onKeyDown(keyCode, event);
     }
-    //        ApiRetrofit.getInstance().login("12","en")
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(observer);
 
 
-//    Observer<Model> observer = new Observer<Model>() {
-//        @Override
-//        public void onSubscribe(Disposable d) {
-//            Log.i("aaaaaaaaaaa","返回1"+d.toString());
-//        }
-//
-//        @Override
-//        public void onNext(Model value) {
-//            Log.i("aaaaaaaaaaa","返回2"+value.getCode());
-//            tv.setText(value.getCode()+"");
-//        }
-//
-//        @Override
-//        public void onError(Throwable e) {
-//            Log.i("aaaaaaaaaaa","返回3"+e.toString());
-//        }
-//
-//        @Override
-//        public void onComplete() {
-//            Log.i("aaaaaaaaaaa","返回4");
-//        }
-//    };
 }

@@ -12,4 +12,6 @@
     <color name="actionsheet_blue">#1497db</color>
     <color name="actionsheet_red">#FD4A2E</color>
     <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="txt_content">#383838</color>
+
 </resources>
